@@ -1,0 +1,52 @@
+public class Main {
+    public static void main(String[] args) {
+        Coche coche1 = new Coche("Seat", "Leon", "Rojo", "1234BBB", 10000);
+        coche1.verPrecio();
+        coche1.frenar();
+        
+        Coche coche2 = new Coche("Ferrari", "Enzo", "Rojo", "5555JJK", 55000);
+        coche2.verPrecio();
+        coche2.detenerse();
+        
+        Coche coche3 = new Coche("Renault", "Clio", "Gris", "4444GFB", 8000);
+        coche3.verPrecio();
+        coche3.arrancar();
+    }
+}
+
+class Coche {
+    private String marca;
+    private String modelo;
+    private String color;
+    private String matricula;
+    private double precio;
+    static double descuento = 2000;
+
+    public Coche(String marca, String modelo, String color, String matricula, double precio) {
+        this.marca = marca; 
+        this.modelo = modelo;
+        this.color = color;
+        this.matricula = matricula;
+        this.precio = precio;
+    }
+
+    public void arrancar() {
+        System.out.println("Arranco!");
+    }
+
+    public void detenerse() {
+        System.out.println("Se paró!");
+    }
+
+    public void acelerar() {
+        System.out.println("Acelero!");
+    }
+
+    public void frenar() {
+        System.out.println("Se paró!");
+    }
+
+    public void verPrecio() {
+        System.out.println("El precio del " + (marca) + " es:" + "$" + (precio - descuento));
+    }
+}
